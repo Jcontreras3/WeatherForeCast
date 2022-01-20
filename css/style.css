@@ -4,3 +4,7 @@
 .White{
     color: white;
 }
+.card{
+    position: absolute;
+    bottom: 10%;
+}
