@@ -3,8 +3,9 @@ import { dev, prod } from "./environment.js";
  let Weather = document.getElementById('Weather');
  let Input = document.getElementById('Input');
  let searchBtn = document.getElementById('searchBtn');
- let city = document.getElementById('city')
- let Temp = document.getElementById('Temp')
+ let city = document.getElementById('city');
+ let Temp = document.getElementById('Temp');
+ let Day = document.getElementById('Day');
 
  let apiKey = '&units=imperial&APPID=';
 
