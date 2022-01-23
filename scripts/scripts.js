@@ -17,6 +17,8 @@ import GetLocationData from "./Geolocation.js";
  let Day3 = document.getElementById('Day3');
  let Day4 = document.getElementById('Day4');
  let Day5 = document.getElementById('Day5');
+ let High = document.getElementById('High');
+ let Low = document.getElementById('Low');
 
  let apiKey = '&units=imperial&APPID=';
 
