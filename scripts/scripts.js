@@ -1,4 +1,5 @@
 import { dev, prod } from "./environment.js";
+import GetLocationData from "./Geolocation.js";
 
  let Weather = document.getElementById('Weather');
  let Input = document.getElementById('Input');
@@ -94,3 +95,10 @@ GetDefaultLocation();
         //console.log(Temp1.textContent = data.list[0].main.temp)
      });
  }
+
+ GetLocationData();
+
+function LocationData(){
+}
+
+LocationData();
