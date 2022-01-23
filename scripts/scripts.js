@@ -99,6 +99,7 @@ GetDefaultLocation();
  GetLocationData();
 
 function LocationData(){
+    
 }
 
 LocationData();
