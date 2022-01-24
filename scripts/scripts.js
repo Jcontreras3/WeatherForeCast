@@ -22,6 +22,7 @@ import {SaveToStorageByCityName, GetStorage, RemoveFromLocalStorage} from "./Loc
  let Low = document.getElementById('Low');
  let Favorites = document.getElementById('Favorites');
  let FavoritesBtn = document.getElementById('FavoritesBtn');
+ let OffCanvastxt = document.getElementById('OffCanvastxt')
 
  let apiKey = '&units=imperial&APPID=';
 
@@ -36,9 +37,9 @@ function GetDefaultLocation(){
     .then(data => {
         city.textContent = data.name;
          Weather.textContent = data.weather[0].description;
-         Temp.textContent = data.main.temp + "°F"; High.textContent = "H: " + data.main.temp_max; Low.textContent = "L: " + data.main.temp_min;
+         Temp.textContent = data.main.temp + "°F";  CurrentDay.textContent  = WeekDay(data.dt[0]); High.textContent = "H: " + data.main.temp_max; Low.textContent = "L: " + data.main.temp_min;
          //CurrentDay.textContent = WeekDay(data.list[0].dt_txt);
-        //console.log(data.weather[0])
+        console.log(CurrentDay.textContent  = WeekDay(data.dt[0]))
     });
 }
 GetDefaultLocation();
@@ -52,7 +53,7 @@ GetDefaultLocation();
      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${Input.value}+${apiKey}`)
      .then(resp => resp.json())
      .then(data =>{
-         city.textContent = data.name; Weather.textContent = data.weather[0].description;Temp.textContent = data.main.temp +"°F"; High.textContent = "H: " + data.main.temp_max; Low.textContent = "L: " + data.main.temp_min;
+         city.textContent = data.name; Weather.textContent = data.weather[0].description;Temp.textContent = data.main.temp +"°F"; CurrentDay.textContent  = WeekDay(data.dt[0]);  High.textContent = "H: " + data.main.temp_max; Low.textContent = "L: " + data.main.temp_min;
          //console.log(data);
      });
  }
