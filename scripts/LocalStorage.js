@@ -1,7 +1,7 @@
 let favorites = [];
-function SaveToStorageByCityName(CityName)
+function SaveToStorageByCityName(cityName)
 {
-    favorites.push(CityName);
+    favorites.push(cityName);
     localStorage.setItem('Favorites', JSON.stringify(favorites));
 }
 
@@ -19,9 +19,9 @@ function GetStorage()
     CheckStorage();
     return favorites;
 }
-function RemoveFromLocalStorage(CityName)
+function RemoveFromLocalStorage(cityName)
 {
-    let cityIndex = favorites.indexOf(CityName);
+    let cityIndex = favorites.indexOf(cityName);
     favorites.splice(cityIndex,1);
     SaveToLocalStorage();
 }

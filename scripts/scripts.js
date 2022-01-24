@@ -20,6 +20,8 @@ import {SaveToStorageByCityName, GetStorage, RemoveFromLocalStorage} from "./Loc
  let Day5 = document.getElementById('Day5');
  let High = document.getElementById('High');
  let Low = document.getElementById('Low');
+ let Favorites = document.getElementById('Favorites');
+ let FavoritesBtn = document.getElementById('FavoritesBtn');
 
  let apiKey = '&units=imperial&APPID=';
 
@@ -101,8 +103,23 @@ GetDefaultLocation();
 
  GetLocationData();
 
-function LocationData(){
+// function LocationData(){
     
-}
+// }
 
-LocationData();
+// LocationData();
+
+FavoritesBtn.addEventListener('click', function(){
+    let data = GetStorage();
+    console.log(data);
+});
+
+let favOn = false;
+Favorites.addEventListener('click', function(){
+    if(favOn == true ){
+        RemoveFromLocalStorage(Input.value);
+    }else{
+        SaveToStorageByCityName(Input.value);
+    }
+    favOn = !favOn;
+});
