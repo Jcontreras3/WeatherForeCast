@@ -1,5 +1,6 @@
 import { dev, prod } from "./environment.js";
 import GetLocationData from "./Geolocation.js";
+import {SaveToStorageByCityName, GetStorage, RemoveFromLocalStorage} from "./LocalStorage.js";
 
  let Weather = document.getElementById('Weather');
  let Input = document.getElementById('Input');
